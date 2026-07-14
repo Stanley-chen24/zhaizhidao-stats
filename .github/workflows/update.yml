@@ -1,0 +1,38 @@
+name: 每週更新統計資料
+
+on:
+  schedule:
+    # 每週四 15:00 UTC = 台灣時間週四 23:00(節目週三播出,VOD 通常週四上架)
+    - cron: '0 15 * * 4'
+  workflow_dispatch:        # 也可在 GitHub 網頁上手動點「Run workflow」
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安裝 yt-dlp
+        run: pip install yt-dlp
+
+      - name: 產生 data.js
+        run: python scrape.py
+
+      - name: 有變更就提交
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data.js; then
+            echo "資料無變更,略過提交。"
+          else
+            git add data.js
+            git commit -m "自動更新資料 $(date -u +%Y-%m-%d)"
+            git push
+          fi

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>現在宅知道 2026 來賓出席統計</title>
+<style>
+  :root {
+    --bg1: #2b6cf0;      /* 宅知道縮圖常見的亮藍 */
+    --bg2: #7b3ff2;      /* 紫 */
+    --ink: #1c2350;      /* 深藍墨色(文字/邊框) */
+    --paper: #ffffff;
+    --yellow: #ffd53d;   /* 黃色點綴 */
+    --pink: #ff5c7a;
+    --muted: #6b7396;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(rgba(255,255,255,.14) 2.5px, transparent 2.5px) 0 0 / 28px 28px,
+      linear-gradient(155deg, var(--bg1), var(--bg2)) fixed;
+    color: var(--ink);
+    font-family: "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
+    line-height: 1.5;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 28px 20px 70px; }
+
+  header { text-align: center; margin: 14px 0 6px; }
+  header h1 {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 3px 0 rgba(28,35,80,.4);
+    transform: rotate(-1.5deg);
+  }
+  header h1 .year {
+    color: var(--ink);
+    background: var(--yellow);
+    border-radius: 10px;
+    padding: 0 12px;
+    margin: 0 4px;
+    display: inline-block;
+    transform: rotate(2deg);
+    box-shadow: 3px 3px 0 rgba(28,35,80,.35);
+  }
+  .updated {
+    display: inline-block;
+    margin-top: 12px;
+    background: rgba(255,255,255,.92);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    padding: 4px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 3px 3px 0 rgba(28,35,80,.35);
+  }
+  .updated .auto { color: #0f9d58; }
+
+  /* 來賓計數卡 */
+  .guest-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 30px 0 14px;
+  }
+  .guest-card {
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    padding: 22px 16px 18px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 6px 6px 0 rgba(28,35,80,.35);
+    transition: transform .15s, box-shadow .15s, background .15s;
+  }
+  .guest-card:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 rgba(28,35,80,.35); }
+  .guest-card.active { background: var(--yellow); }
+  .guest-card .name { font-size: 1.3rem; font-weight: 900; letter-spacing: 2px; }
+  .guest-card .count {
+    font-size: 3rem; font-weight: 900; line-height: 1.15;
+    color: var(--bg1);
+  }
+  .guest-card.active .count { color: var(--ink); }
+  .guest-card .unit { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+  .guest-card.active .unit { color: var(--ink); }
+  .hint {
+    text-align: center;
+    color: rgba(255,255,255,.95);
+    font-size: 0.85rem;
+    text-shadow: 0 1px 0 rgba(28,35,80,.3);
+    margin-bottom: 26px;
+  }
+
+  /* 集數列表 */
+  .section-title {
+    display: inline-block;
+    font-size: 1.15rem; font-weight: 900; letter-spacing: 1px;
+    color: var(--ink);
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    padding: 4px 16px;
+    margin: 22px 0 16px;
+    transform: rotate(-1deg);
+    box-shadow: 4px 4px 0 rgba(28,35,80,.35);
+  }
+  .episode {
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 18px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    box-shadow: 6px 6px 0 rgba(28,35,80,.35);
+  }
+  .episode .thumb-link { flex: 0 0 240px; }
+  .episode img.thumb {
+    width: 240px; max-width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    display: block;
+    background: #dfe4f5;
+  }
+  .episode .info { flex: 1 1 300px; min-width: 0; }
+  .episode .date {
+    display: inline-block;
+    background: var(--ink); color: #fff;
+    border-radius: 6px;
+    padding: 1px 10px;
+    font-weight: 700; font-size: 0.85rem;
+  }
+  .episode .title { font-size: 1.02rem; font-weight: 700; margin: 8px 0 10px; word-break: break-word; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .chip {
+    background: #eef1fb;
+    border: 1.5px solid #c9cfe8;
+    border-radius: 999px;
+    padding: 2px 12px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .chip.hit {
+    background: var(--yellow);
+    border-color: var(--ink);
+    color: var(--ink);
+    font-weight: 800;
+  }
+  .parts { display: flex; flex-wrap: wrap; gap: 8px; }
+  .parts a {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ink);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 9px;
+    padding: 6px 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background .15s, color .15s, transform .15s;
+  }
+  .parts a:hover { background: var(--yellow); color: var(--ink); transform: translateY(-2px); }
+  .parts a svg { width: 14px; height: 14px; fill: currentColor; }
+  .empty {
+    text-align: center;
+    color: #fff;
+    background: rgba(28,35,80,.35);
+    border-radius: 14px;
+    padding: 40px 0;
+  }
+  footer {
+    text-align: center;
+    margin-top: 34px;
+    color: rgba(255,255,255,.85);
+    font-size: 0.8rem;
+    text-shadow: 0 1px 0 rgba(28,35,80,.3);
+  }
+  footer a { color: var(--yellow); }
+
+  @media (max-width: 560px) {
+    header h1 { font-size: 1.5rem; }
+    .episode .thumb-link { flex: 1 1 100%; }
+    .episode img.thumb { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>現在宅知道<span class="year" id="year">2026</span>來賓出席統計</h1>
+    <br>
+    <div class="updated" id="updated">載入中…</div>
+  </header>
+
+  <div class="guest-cards" id="guestCards"></div>
+  <div class="hint">點擊來賓卡片可篩選該來賓參加的集數,再點一次取消。同一天的多個片段 (P1、P2…) 只計算一次出席。</div>
+
+  <div><span class="section-title" id="listTitle">全部集數</span></div>
+  <div id="episodeList"></div>
+
+  <footer>
+    資料來源:<a href="https://www.youtube.com/@cbotaku" target="_blank" rel="noopener">現在宅知道官方頻道 @cbotaku</a>|每週四中午自動更新
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  // ===== 設定 =====
+  var YEAR = "2026";
+  var GUESTS = {
+    "鐵牛": ["鐵牛"],
+    "偷米": ["偷米"],
+    "赤鬼伯伯": ["赤鬼伯伯", "赤鬼"]
+  };
+  var GUEST_NAMES = Object.keys(GUESTS);
+  var DATE_RE = /(20\d{2})(\d{2})(\d{2})/;
+  var PART_RE = /[｜|]\s*P(\d+)\s*$/i;
+
+  var state = { data: null, activeGuest: null };
+
+  // ===== 統計邏輯(與 scrape.py 相同規則) =====
+  function buildData(videos, updatedText) {
+    var byDate = {};
+    videos.forEach(function (v) {
+      var title = (v.title || "").trim();
+      if (title.indexOf("現在宅知道") === -1 || title.toUpperCase().indexOf("VOD") === -1) return;
+      var m = DATE_RE.exec(title);
+      if (!m || m[1] !== YEAR) return;
+      var date = m[1] + m[2] + m[3];
+      var pm = PART_RE.exec(title);
+      var part = pm ? parseInt(pm[1], 10) : 1;
+      if (!byDate[date]) byDate[date] = [];
+      byDate[date].push({
+        part: part, id: v.id, title: title,
+        url: "https://www.youtube.com/watch?v=" + v.id,
+        thumb: "https://i.ytimg.com/vi/" + v.id + "/hqdefault.jpg"
+      });
+    });
+
+    var counts = {};
+    GUEST_NAMES.forEach(function (g) { counts[g] = 0; });
+    var episodes = Object.keys(byDate).sort().reverse().map(function (date) {
+      var parts = byDate[date].sort(function (a, b) { return a.part - b.part; });
+      var allTitles = parts.map(function (p) { return p.title; }).join(" ");
+      var present = GUEST_NAMES.filter(function (g) {
+        return GUESTS[g].some(function (alias) { return allTitles.indexOf(alias) !== -1; });
+      });
+      present.forEach(function (g) { counts[g] += 1; });
+      return {
+        date: date,
+        dateText: date.slice(0, 4) + "/" + date.slice(4, 6) + "/" + date.slice(6),
+        title: parts[0].title.replace(PART_RE, "").trim(),
+        guests: present,
+        parts: parts
+      };
+    });
+
+    return { counts: counts, episodes: episodes, updated: updatedText };
+  }
+
+  // ===== 畫面 =====
+  var playIcon = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function render() {
+    var data = state.data;
+    document.getElementById("updated").innerHTML = data
+      ? '<span class="auto">⟳ 每週四自動更新</span>|資料時間:' + esc(data.updated)
+      : "找不到資料(data.js)";
+
+    var cardHost = document.getElementById("guestCards");
+    cardHost.innerHTML = "";
+    GUEST_NAMES.forEach(function (g) {
+      var div = document.createElement("div");
+      div.className = "guest-card" + (state.activeGuest === g ? " active" : "");
+      div.innerHTML =
+        '<div class="name">' + esc(g) + '</div>' +
+        '<div class="count">' + (data ? data.counts[g] : "–") + '</div>' +
+        '<div class="unit">次出席(' + YEAR + ' 年)</div>';
+      div.onclick = function () {
+        state.activeGuest = (state.activeGuest === g) ? null : g;
+        render();
+      };
+      cardHost.appendChild(div);
+    });
+
+    var host = document.getElementById("episodeList");
+    if (!data) {
+      document.getElementById("listTitle").textContent = "全部集數";
+      host.innerHTML = '<div class="empty">尚無資料:請先執行 python scrape.py 產生 data.js。</div>';
+      return;
+    }
+    var eps = data.episodes.filter(function (ep) {
+      return !state.activeGuest || ep.guests.indexOf(state.activeGuest) !== -1;
+    });
+    document.getElementById("listTitle").textContent = state.activeGuest
+      ? state.activeGuest + " 參加的集數(" + eps.length + " 集)"
+      : "全部集數(" + data.episodes.length + " 集)";
+
+    if (!eps.length) {
+      host.innerHTML = '<div class="empty">沒有符合的集數。</div>';
+      return;
+    }
+    host.innerHTML = eps.map(function (ep) {
+      var first = ep.parts[0];
+      var chips = ep.guests.map(function (g) {
+        return '<span class="chip hit">' + esc(g) + '</span>';
+      }).join("") || '<span class="chip">本集無追蹤中的來賓</span>';
+      var parts = ep.parts.map(function (p) {
+        return '<a href="' + esc(p.url) + '" target="_blank" rel="noopener" title="' +
+          esc(p.title) + '">' + playIcon + 'P' + p.part + '</a>';
+      }).join("");
+      return (
+        '<div class="episode">' +
+          '<a class="thumb-link" href="' + esc(first.url) + '" target="_blank" rel="noopener">' +
+            '<img class="thumb" loading="lazy" src="' + esc(first.thumb) + '" alt="縮圖">' +
+          '</a>' +
+          '<div class="info">' +
+            '<span class="date">' + ep.dateText + '</span>' +
+            '<div class="title">' + esc(ep.title) + '</div>' +
+            '<div class="chips">' + chips + '</div>' +
+            '<div class="parts">' + parts + '</div>' +
+          '</div>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  // ===== 啟動:讀取 data.js(由 GitHub Actions 每週四自動更新)=====
+  if (window.FALLBACK_DATA) {
+    state.data = buildData(window.FALLBACK_DATA.videos, window.FALLBACK_DATA.updated);
+  }
+  render();
+})();
+</script>
+</body>
+</html>
