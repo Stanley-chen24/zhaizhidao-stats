@@ -339,7 +339,12 @@
   }
 
   // ===== 啟動:讀取 data.js(由 GitHub Actions 每週四自動更新)=====
-  if (window.FALLBACK_DATA) {
+  // 支援兩種格式:
+  //   SHOW_DATA     — scrape.py 已預先算好統計,直接顯示
+  //   FALLBACK_DATA — 原始影片清單,由前端 buildData() 計算
+  if (window.SHOW_DATA) {
+    state.data = window.SHOW_DATA;
+  } else if (window.FALLBACK_DATA) {
     state.data = buildData(window.FALLBACK_DATA.videos, window.FALLBACK_DATA.updated);
   }
   render();
