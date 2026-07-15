@@ -27,6 +27,15 @@
   .container { max-width: 1080px; margin: 0 auto; padding: 28px 20px 70px; }
 
   header { text-align: center; margin: 14px 0 6px; }
+  .logo {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 12px;
+    transform: rotate(-8deg);
+    border: 3px solid #fff;
+    box-shadow: 4px 4px 0 rgba(28,35,80,.35);
+  }
   header h1 {
     display: inline-block;
     font-size: 2rem;
@@ -188,6 +197,24 @@
     border-radius: 14px;
     padding: 40px 0;
   }
+  /* 官方頻道橫幅 */
+  .banner-link {
+    display: block;
+    max-width: 720px;
+    margin: 36px auto 0;
+  }
+  .banner-link img {
+    display: block;
+    width: 100%;
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 6px 6px 0 rgba(28,35,80,.35);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .banner-link:hover img {
+    transform: translate(-2px,-2px);
+    box-shadow: 8px 8px 0 rgba(28,35,80,.35);
+  }
   footer {
     text-align: center;
     margin-top: 34px;
@@ -199,6 +226,7 @@
 
   @media (max-width: 560px) {
     header h1 { font-size: 1.5rem; }
+    .logo { width: 48px; height: 48px; margin-right: 8px; }
     .episode .thumb-link { flex: 1 1 100%; }
     .episode img.thumb { width: 100%; }
   }
@@ -207,7 +235,7 @@
 <body>
 <div class="container">
   <header>
-    <h1>宅知道<span class="year" id="year">2026</span>救火大將軍是誰?</h1>
+    <h1><img class="logo" src="assets/logo.png" alt="現在宅知道 Logo">宅知道<span class="year" id="year">2026</span>救火大將軍是誰?</h1>
     <br>
     <div class="updated" id="updated">載入中…</div>
   </header>
@@ -217,6 +245,10 @@
 
   <div><span class="section-title" id="listTitle">全部集數</span></div>
   <div id="episodeList"></div>
+
+  <a class="banner-link" href="https://www.youtube.com/@cbotaku" target="_blank" rel="noopener">
+    <img src="assets/banner.png" alt="現在宅知道|每週三晚間 22:30 準時更新 YouTube">
+  </a>
 
   <footer>
     資料來源:<a href="https://www.youtube.com/@cbotaku" target="_blank" rel="noopener">現在宅知道官方頻道 @cbotaku</a>|每週四中午自動更新
