@@ -215,6 +215,50 @@
     transform: translate(-2px,-2px);
     box-shadow: 8px 8px 0 rgba(28,35,80,.35);
   }
+  /* 冠軍王冠 */
+  .guest-card.champion {
+    border-color: var(--yellow);
+    background: linear-gradient(#ffffff, #fff7d6);
+  }
+  .guest-card .crown {
+    font-size: 2.1rem; line-height: 1;
+    margin-bottom: 2px;
+    transform: rotate(-6deg);
+    filter: drop-shadow(2px 2px 0 rgba(28,35,80,.3));
+  }
+  .guest-card .ribbon {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    padding: 2px 14px;
+    font-size: 0.78rem; font-weight: 800;
+    box-shadow: 2px 2px 0 rgba(28,35,80,.3);
+  }
+
+  /* 列表標題列 + 切換 / 顯示更多 按鈕 */
+  .list-head {
+    display: flex; align-items: center; gap: 12px;
+    flex-wrap: wrap; margin: 22px 0 16px;
+  }
+  .list-head .section-title { margin: 0; }
+  .toggle-btn, .more-btn {
+    font-family: inherit;
+    background: var(--paper); color: var(--ink);
+    border: 2px solid var(--ink); border-radius: 999px;
+    padding: 5px 16px; font-size: 0.85rem; font-weight: 800;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 rgba(28,35,80,.3);
+    transition: transform .12s, box-shadow .12s, background .12s;
+  }
+  .toggle-btn:hover, .more-btn:hover {
+    background: var(--yellow);
+    transform: translate(-1px,-1px);
+    box-shadow: 4px 4px 0 rgba(28,35,80,.3);
+  }
+  .load-more { text-align: center; margin: 4px 0 8px; }
+  .more-btn { padding: 9px 26px; font-size: 0.9rem; }
   footer {
     text-align: center;
     margin-top: 34px;
@@ -243,8 +287,12 @@
   <div class="guest-cards" id="guestCards"></div>
   <div class="hint">點擊來賓卡片可篩選該來賓參加的集數,再點一次取消</div>
 
-  <div><span class="section-title" id="listTitle">全部集數</span></div>
+  <div class="list-head">
+    <span class="section-title" id="listTitle">集數列表</span>
+    <button class="toggle-btn" id="viewToggle" style="display:none">顯示全部集數</button>
+  </div>
   <div id="episodeList"></div>
+  <div id="loadMore" class="load-more"></div>
 
   <a class="banner-link" href="https://www.youtube.com/@cbotaku" target="_blank" rel="noopener">
     <img src="assets/banner.png" alt="現在宅知道|每週三晚間 22:30 準時更新 YouTube">
@@ -275,7 +323,8 @@
   var DATE_RE = /(20\d{2})(\d{2})(\d{2})/;
   var PART_RE = /[｜|]\s*P(\d+)\s*$/i;
 
-  var state = { data: null, activeGuest: null };
+  var state = { data: null, activeGuest: null, showAll: false, limit: 12 };
+  var PAGE = 12;
 
   // ===== 統計邏輯(與 scrape.py 相同規則) =====
   function buildData(videos, updatedText) {
@@ -331,46 +380,79 @@
       ? '<span class="auto">⟳ 每週四自動更新</span>|資料時間:' + esc(data.updated)
       : "找不到資料(data.js)";
 
+    // ----- 來賓卡片:依出席次數排序,最高分戴王冠 -----
+    var counts = data ? data.counts : {};
+    var maxCount = data ? Math.max.apply(null, GUEST_NAMES.map(function (g) { return counts[g] || 0; })) : 0;
+    var ordered = GUEST_NAMES.slice().sort(function (a, b) { return (counts[b] || 0) - (counts[a] || 0); });
+    var championCount = GUEST_NAMES.filter(function (g) { return (counts[g] || 0) === maxCount; }).length;
+
     var cardHost = document.getElementById("guestCards");
     cardHost.innerHTML = "";
-    GUEST_NAMES.forEach(function (g) {
+    ordered.forEach(function (g) {
+      var isChampion = data && maxCount > 0 && (counts[g] || 0) === maxCount;
       var div = document.createElement("div");
-      div.className = "guest-card" + (state.activeGuest === g ? " active" : "");
+      div.className = "guest-card" + (state.activeGuest === g ? " active" : "") + (isChampion ? " champion" : "");
       var photo = GUEST_PHOTOS[g];
       var avatar = photo
         ? '<img class="avatar" src="' + encodeURI(photo.src) + '" alt="' + esc(g) +
           '" style="object-position:' + photo.pos + '">'
         : "";
+      var crown = isChampion ? '<div class="crown">👑</div>' : "";
+      var ribbon = isChampion
+        ? '<div class="ribbon">' + (championCount > 1 ? "並列救火大將軍" : "救火大將軍") + '</div>'
+        : "";
       div.innerHTML =
-        avatar +
+        crown + avatar +
         '<div class="name">' + esc(g) + '</div>' +
-        '<div class="count">' + (data ? data.counts[g] : "–") + '</div>' +
-        '<div class="unit">次出席(' + YEAR + ' 年)</div>';
+        '<div class="count">' + (data ? (counts[g] || 0) : "–") + '</div>' +
+        '<div class="unit">次出席(' + YEAR + ' 年)</div>' +
+        ribbon;
       div.onclick = function () {
         state.activeGuest = (state.activeGuest === g) ? null : g;
+        state.limit = PAGE;
         render();
       };
       cardHost.appendChild(div);
     });
 
+    // ----- 集數列表 -----
     var host = document.getElementById("episodeList");
+    var toggle = document.getElementById("viewToggle");
+    var loadMore = document.getElementById("loadMore");
+
     if (!data) {
-      document.getElementById("listTitle").textContent = "全部集數";
+      document.getElementById("listTitle").textContent = "集數列表";
+      toggle.style.display = "none";
+      loadMore.innerHTML = "";
       host.innerHTML = '<div class="empty">尚無資料:請先執行 python scrape.py 產生 data.js。</div>';
       return;
     }
-    var eps = data.episodes.filter(function (ep) {
-      return !state.activeGuest || ep.guests.indexOf(state.activeGuest) !== -1;
-    });
-    document.getElementById("listTitle").textContent = state.activeGuest
-      ? state.activeGuest + " 參加的集數(" + eps.length + " 集)"
-      : "全部集數(" + data.episodes.length + " 集)";
 
-    if (!eps.length) {
+    var eps = data.episodes.filter(function (ep) {
+      if (state.activeGuest) return ep.guests.indexOf(state.activeGuest) !== -1;
+      return state.showAll ? true : ep.guests.length > 0;
+    });
+    var total = eps.length;
+    var shown = eps.slice(0, state.limit);
+
+    document.getElementById("listTitle").textContent = state.activeGuest
+      ? state.activeGuest + " 參加的集數(" + total + " 集)"
+      : (state.showAll ? "全部集數(" + total + " 集)" : "三位來賓出席的集數(" + total + " 集)");
+
+    if (state.activeGuest) {
+      toggle.style.display = "none";
+    } else {
+      toggle.style.display = "inline-block";
+      toggle.textContent = state.showAll ? "只看三位來賓" : "顯示全部集數";
+    }
+
+    if (!shown.length) {
       host.innerHTML = '<div class="empty">沒有符合的集數。</div>';
+      loadMore.innerHTML = "";
       return;
     }
-    host.innerHTML = eps.map(function (ep) {
+
+    host.innerHTML = shown.map(function (ep) {
       var first = ep.parts[0];
       var chips = ep.guests.map(function (g) {
         return '<span class="chip hit">' + esc(g) + '</span>';
@@ -393,12 +475,27 @@
         '</div>'
       );
     }).join("");
+
+    if (shown.length < total) {
+      loadMore.innerHTML = '<button class="more-btn" id="moreBtn">顯示更多(還有 ' + (total - shown.length) + ' 集)</button>';
+      document.getElementById("moreBtn").onclick = function () {
+        state.limit += PAGE;
+        render();
+      };
+    } else {
+      loadMore.innerHTML = "";
+    }
   }
 
   // ===== 啟動:讀取 data.js(由 GitHub Actions 每週四自動更新)=====
   // 支援兩種格式:
   //   SHOW_DATA     — scrape.py 已預先算好統計,直接顯示
   //   FALLBACK_DATA — 原始影片清單,由前端 buildData() 計算
+  document.getElementById("viewToggle").onclick = function () {
+    state.showAll = !state.showAll;
+    state.limit = PAGE;
+    render();
+  };
   if (window.SHOW_DATA) {
     state.data = window.SHOW_DATA;
   } else if (window.FALLBACK_DATA) {
