@@ -1,2 +1,6 @@
 __pycache__/
 .vscode/
+site_index.html
+site_data.js
+final_index.html
+final_data.js
