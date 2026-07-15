@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>現在宅知道 2026 來賓出席統計</title>
+<title>2026 宅知道 救火大將軍是誰</title>
 <style>
   :root {
     --bg1: #2b6cf0;      /* 宅知道縮圖常見的亮藍 */
@@ -80,6 +80,19 @@
   }
   .guest-card:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 rgba(28,35,80,.35); }
   .guest-card.active { background: var(--yellow); }
+  .guest-card .avatar {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--ink);
+    background: #dfe4f5;
+    margin: 0 auto 12px;
+    display: block;
+    box-shadow: 0 0 0 4px var(--yellow), 4px 4px 0 rgba(28,35,80,.3);
+  }
+  .guest-card.active .avatar {
+    box-shadow: 0 0 0 4px #fff, 4px 4px 0 rgba(28,35,80,.3);
+  }
   .guest-card .name { font-size: 1.3rem; font-weight: 900; letter-spacing: 2px; }
   .guest-card .count {
     font-size: 3rem; font-weight: 900; line-height: 1.15;
@@ -194,7 +207,7 @@
 <body>
 <div class="container">
   <header>
-    <h1>現在宅知道<span class="year" id="year">2026</span>來賓出席統計</h1>
+    <h1>宅知道<span class="year" id="year">2026</span>救火大將軍是誰?</h1>
     <br>
     <div class="updated" id="updated">載入中…</div>
   </header>
@@ -221,6 +234,12 @@
     "赤鬼伯伯": ["赤鬼伯伯", "赤鬼"]
   };
   var GUEST_NAMES = Object.keys(GUESTS);
+  // 來賓照片與臉部裁切焦點(object-position),讓不同構圖的照片都對準圓框
+  var GUEST_PHOTOS = {
+    "鐵牛":     { src: "guest_photos/tieniu.jpg", pos: "center 28%" },
+    "偷米":     { src: "guest_photos/toumi.jpg", pos: "50% 8%" },
+    "赤鬼伯伯": { src: "guest_photos/chigui.jpg", pos: "55% 20%" }
+  };
   var DATE_RE = /(20\d{2})(\d{2})(\d{2})/;
   var PART_RE = /[｜|]\s*P(\d+)\s*$/i;
 
@@ -285,7 +304,13 @@
     GUEST_NAMES.forEach(function (g) {
       var div = document.createElement("div");
       div.className = "guest-card" + (state.activeGuest === g ? " active" : "");
+      var photo = GUEST_PHOTOS[g];
+      var avatar = photo
+        ? '<img class="avatar" src="' + encodeURI(photo.src) + '" alt="' + esc(g) +
+          '" style="object-position:' + photo.pos + '">'
+        : "";
       div.innerHTML =
+        avatar +
         '<div class="name">' + esc(g) + '</div>' +
         '<div class="count">' + (data ? data.counts[g] : "–") + '</div>' +
         '<div class="unit">次出席(' + YEAR + ' 年)</div>';
