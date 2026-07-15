@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stanley-chen24.github.io/zhaizhidao-stats/sitemap.xml
