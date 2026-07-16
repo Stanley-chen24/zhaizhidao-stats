@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-07-15 02:01(台灣時間)",
+  "updated": "2026-07-17 00:22(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,28 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 4
   },
   "episodes": [
+    {
+      "date": "20260715",
+      "dateText": "2026/07/15",
+      "title": "跟三大男一起回到那個純真美好的年代，從深山歸來的魯蛋可以逛便利商店了｜6tan、鳥屎 Feat. 魯蛋｜現在宅知道 VOD｜20260715",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "PoHEeHnsLRA",
+          "title": "跟三大男一起回到那個純真美好的年代，從深山歸來的魯蛋可以逛便利商店了｜6tan、鳥屎 Feat. 魯蛋｜現在宅知道 VOD｜20260715｜P1",
+          "url": "https://www.youtube.com/watch?v=PoHEeHnsLRA",
+          "thumb": "https://i.ytimg.com/vi/PoHEeHnsLRA/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "BoS-6xfpVaw",
+          "title": "節目有新的接班人了？！感受《爆爆王》最後的波紋吧｜6tan、鳥屎 Feat. 魯蛋、小餐包｜現在宅知道 VOD｜20260715｜P2",
+          "url": "https://www.youtube.com/watch?v=BoS-6xfpVaw",
+          "thumb": "https://i.ytimg.com/vi/BoS-6xfpVaw/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260708",
       "dateText": "2026/07/08",
