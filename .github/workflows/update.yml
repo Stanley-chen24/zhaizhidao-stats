@@ -2,8 +2,8 @@ name: 每週更新統計資料
 
 on:
   schedule:
-    # 每週四 15:00 UTC = 台灣時間週四 23:00(節目週三播出,VOD 通常週四上架)
-    - cron: '0 15 * * 4'
+    # 每週四 00:00 UTC = 台灣時間週四 23:00(節目週三播出,VOD 通常週四上架)
+    - cron: '0 14 * * 4'
   workflow_dispatch:        # 也可在 GitHub 網頁上手動點「Run workflow」
 
 permissions:
