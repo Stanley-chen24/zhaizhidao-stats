@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-07-17 00:22(台灣時間)",
+  "updated": "2026-07-23 11:20(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,35 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 4
   },
   "episodes": [
+    {
+      "date": "20260722",
+      "dateText": "2026/07/22",
+      "title": "節目最新廣告歌：現在宅知道 OH YA! I KNOW ♪｜6tan、鳥屎 Feat. 計畫通行｜現在宅知道 VOD｜20260722",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "sPAM1V7Nu2s",
+          "title": "節目最新廣告歌：現在宅知道 OH YA! I KNOW ♪｜6tan、鳥屎 Feat. 計畫通行｜現在宅知道 VOD｜20260722｜P1",
+          "url": "https://www.youtube.com/watch?v=sPAM1V7Nu2s",
+          "thumb": "https://i.ytimg.com/vi/sPAM1V7Nu2s/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "Wk-y9lxWVY4",
+          "title": "歷戰迷因歌王直接現場表演！《#迷因宅會考：唱歌篇》｜6tan、鳥屎 Feat. 計畫通行｜現在宅知道 VOD｜20260722｜P2",
+          "url": "https://www.youtube.com/watch?v=Wk-y9lxWVY4",
+          "thumb": "https://i.ytimg.com/vi/Wk-y9lxWVY4/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "MjrW3ffmkbo",
+          "title": "暌違多年的宅知道線下活動，大家我們漫博見！且來且珍惜｜6tan、鳥屎｜現在宅知道 VOD｜20260722｜P3",
+          "url": "https://www.youtube.com/watch?v=MjrW3ffmkbo",
+          "thumb": "https://i.ytimg.com/vi/MjrW3ffmkbo/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260715",
       "dateText": "2026/07/15",
