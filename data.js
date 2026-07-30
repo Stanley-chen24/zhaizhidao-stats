@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-07-23 11:20(台灣時間)",
+  "updated": "2026-07-30 10:43(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,43 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 4
   },
   "episodes": [
+    {
+      "date": "20260729",
+      "dateText": "2026/07/29",
+      "title": "傳說對決天才型少年們，絕對正向的神級自律電競職業路｜6tan、鳥屎 Feat. 小葵、閃電狼：Abao、奶綠｜現在宅知道 VOD｜20260729",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "1a4yidj_a2c",
+          "title": "傳說對決天才型少年們，絕對正向的神級自律電競職業路｜6tan、鳥屎 Feat. 小葵、閃電狼：Abao、奶綠｜現在宅知道 VOD｜20260729｜P1",
+          "url": "https://www.youtube.com/watch?v=1a4yidj_a2c",
+          "thumb": "https://i.ytimg.com/vi/1a4yidj_a2c/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "wj91pmyDHEg",
+          "title": "未來線下活動就在公園體健設施集合！35歲的身體耍25歲的寶受到40歲的懲罰｜6tan、鳥屎 Feat. 小葵｜現在宅知道 VOD｜20260729｜P2",
+          "url": "https://www.youtube.com/watch?v=wj91pmyDHEg",
+          "thumb": "https://i.ytimg.com/vi/wj91pmyDHEg/hqdefault.jpg"
+        }
+      ]
+    },
+    {
+      "date": "20260724",
+      "dateText": "2026/07/24",
+      "title": "【宅知道SP】漫博線下同樂會｜6tan、鳥屎｜現在宅知道 VOD｜20260724",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "gaj4zAdarQc",
+          "title": "【宅知道SP】漫博線下同樂會｜6tan、鳥屎｜現在宅知道 VOD｜20260724",
+          "url": "https://www.youtube.com/watch?v=gaj4zAdarQc",
+          "thumb": "https://i.ytimg.com/vi/gaj4zAdarQc/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260722",
       "dateText": "2026/07/22",
