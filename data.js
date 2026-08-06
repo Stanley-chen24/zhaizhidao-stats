@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-07-30 10:43(台灣時間)",
+  "updated": "2026-08-06 10:54(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -8,10 +8,34 @@ window.SHOW_DATA = {
   ],
   "counts": {
     "鐵牛": 4,
-    "偷米": 4,
+    "偷米": 5,
     "赤鬼伯伯": 4
   },
   "episodes": [
+    {
+      "date": "20260805",
+      "dateText": "2026/08/05",
+      "title": "這個上面有 LeBron的簽名可以先拿送去鑑定嗎？人類的犯錯竟然也有經典版？！｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805",
+      "guests": [
+        "偷米"
+      ],
+      "parts": [
+        {
+          "part": 1,
+          "id": "SIVLgZB5IWI",
+          "title": "這個上面有 LeBron的簽名可以先拿送去鑑定嗎？人類的犯錯竟然也有經典版？！｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805｜P1",
+          "url": "https://www.youtube.com/watch?v=SIVLgZB5IWI",
+          "thumb": "https://i.ytimg.com/vi/SIVLgZB5IWI/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "O0xiKOzdogk",
+          "title": "皮卡丘快使出欸不是你先等一下；這招這麼強一定要放吧？｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805｜P2",
+          "url": "https://www.youtube.com/watch?v=O0xiKOzdogk",
+          "thumb": "https://i.ytimg.com/vi/O0xiKOzdogk/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260729",
       "dateText": "2026/07/29",
