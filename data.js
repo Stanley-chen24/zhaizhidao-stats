@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-08-06 10:54(台灣時間)",
+  "updated": "2026-08-13 10:20(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -13,9 +13,31 @@ window.SHOW_DATA = {
   },
   "episodes": [
     {
+      "date": "20260812",
+      "dateText": "2026/08/12",
+      "title": "做音樂最重要的就是態度！不要用說話來說話，用音樂來對話吧｜6tan、鳥屎 Feat. 達康.come｜現在宅知道 VOD｜20260812",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "CPJPVeMAgiY",
+          "title": "做音樂最重要的就是態度！不要用說話來說話，用音樂來對話吧｜6tan、鳥屎 Feat. 達康.come｜現在宅知道 VOD｜20260812｜P1",
+          "url": "https://www.youtube.com/watch?v=CPJPVeMAgiY",
+          "thumb": "https://i.ytimg.com/vi/CPJPVeMAgiY/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "iXXXBzXhXbk",
+          "title": "夢幻隊伍集結！《漫威鬥魂》最爽快格鬥輕鬆上手｜6tan、鳥屎 Feat. 達康.come｜現在宅知道 VOD｜20260812｜P2",
+          "url": "https://www.youtube.com/watch?v=iXXXBzXhXbk",
+          "thumb": "https://i.ytimg.com/vi/iXXXBzXhXbk/hqdefault.jpg"
+        }
+      ]
+    },
+    {
       "date": "20260805",
       "dateText": "2026/08/05",
-      "title": "這個上面有 LeBron的簽名可以先拿送去鑑定嗎？人類的犯錯竟然也有經典版？！｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805",
+      "title": "把詐騙的手給我拿開TCG卡牌！大家送鑑定買卡千萬要小心｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805",
       "guests": [
         "偷米"
       ],
@@ -23,7 +45,7 @@ window.SHOW_DATA = {
         {
           "part": 1,
           "id": "SIVLgZB5IWI",
-          "title": "這個上面有 LeBron的簽名可以先拿送去鑑定嗎？人類的犯錯竟然也有經典版？！｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805｜P1",
+          "title": "把詐騙的手給我拿開TCG卡牌！大家送鑑定買卡千萬要小心｜6tan、鳥屎 Feat. 偷米、中指通｜現在宅知道 VOD｜20260805｜P1",
           "url": "https://www.youtube.com/watch?v=SIVLgZB5IWI",
           "thumb": "https://i.ytimg.com/vi/SIVLgZB5IWI/hqdefault.jpg"
         },
