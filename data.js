@@ -1,17 +1,48 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-08-13 10:20(台灣時間)",
+  "updated": "2026-08-20 09:26(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
     "赤鬼伯伯"
   ],
   "counts": {
-    "鐵牛": 4,
+    "鐵牛": 5,
     "偷米": 5,
     "赤鬼伯伯": 4
   },
   "episodes": [
+    {
+      "date": "20260819",
+      "dateText": "2026/08/19",
+      "title": "猛男人夫團陪大家過七夕，微放風笑嘻嘻｜鳥屎 Feat. 鐵牛、八毛、小六｜現在宅知道 VOD｜20260819",
+      "guests": [
+        "鐵牛"
+      ],
+      "parts": [
+        {
+          "part": 1,
+          "id": "fde7CN2ukBo",
+          "title": "猛男人夫團陪大家過七夕，微放風笑嘻嘻｜鳥屎 Feat. 鐵牛、八毛、小六｜現在宅知道 VOD｜20260819｜P1",
+          "url": "https://www.youtube.com/watch?v=fde7CN2ukBo",
+          "thumb": "https://i.ytimg.com/vi/fde7CN2ukBo/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "MWcVA_4BNbs",
+          "title": "鬼門開讓八大膽帶各位一起日本事故監視打工趣｜鳥屎 Feat. 鐵牛、八毛、小六｜現在宅知道 VOD｜20260819｜P2",
+          "url": "https://www.youtube.com/watch?v=MWcVA_4BNbs",
+          "thumb": "https://i.ytimg.com/vi/MWcVA_4BNbs/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "3hBWD6VsNfM",
+          "title": "皮蛋布丁射龍門，這碗輸的要吃掉？！｜鳥屎 Feat. 鐵牛、八毛、小六｜現在宅知道 VOD｜20260819｜P3",
+          "url": "https://www.youtube.com/watch?v=3hBWD6VsNfM",
+          "thumb": "https://i.ytimg.com/vi/3hBWD6VsNfM/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260812",
       "dateText": "2026/08/12",
