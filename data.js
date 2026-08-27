@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-08-20 09:26(台灣時間)",
+  "updated": "2026-08-27 16:28(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -9,9 +9,33 @@ window.SHOW_DATA = {
   "counts": {
     "鐵牛": 5,
     "偷米": 5,
-    "赤鬼伯伯": 4
+    "赤鬼伯伯": 5
   },
   "episodes": [
+    {
+      "date": "20260826",
+      "dateText": "2026/08/26",
+      "title": "最早從線上走到線下的混沌紀元，好想再吃一次那支雞腿捲｜6tan、鳥屎 Feat. 赤鬼伯伯｜現在宅知道 VOD｜20260826",
+      "guests": [
+        "赤鬼伯伯"
+      ],
+      "parts": [
+        {
+          "part": 1,
+          "id": "s8DOwYq9zpw",
+          "title": "最早從線上走到線下的混沌紀元，好想再吃一次那支雞腿捲｜6tan、鳥屎 Feat. 赤鬼伯伯｜現在宅知道 VOD｜20260826｜P1",
+          "url": "https://www.youtube.com/watch?v=s8DOwYq9zpw",
+          "thumb": "https://i.ytimg.com/vi/s8DOwYq9zpw/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "BuasqtwwN18",
+          "title": "RRRRRRR 怎麼有烏鴉啦，叫的好像真的爆炸一樣啦｜6tan、鳥屎 Feat. 赤鬼伯伯｜現在宅知道 VOD｜20260826｜P2",
+          "url": "https://www.youtube.com/watch?v=BuasqtwwN18",
+          "thumb": "https://i.ytimg.com/vi/BuasqtwwN18/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260819",
       "dateText": "2026/08/19",
