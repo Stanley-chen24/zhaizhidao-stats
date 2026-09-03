@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-09-01 12:13(台灣時間)",
+  "updated": "2026-09-03 10:38(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,35 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 5
   },
   "episodes": [
+    {
+      "date": "20260902",
+      "dateText": "2026/09/02",
+      "title": "請豬魔保佑之後宅知道航海王考試都能第一名｜6tan、鳥屎｜現在宅知道 VOD｜20260902",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "o8ZEGOtloOw",
+          "title": "請豬魔保佑之後宅知道航海王考試都能第一名｜6tan、鳥屎｜現在宅知道 VOD｜20260902｜P1",
+          "url": "https://www.youtube.com/watch?v=o8ZEGOtloOw",
+          "thumb": "https://i.ytimg.com/vi/o8ZEGOtloOw/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "wzgDA4dU0Pg",
+          "title": "可以換實體寶物的《玩星派對》，幽靈水晶的幻影第七人：幽靈水晶腳｜6tan、鳥屎 Feat. CRYXTAL 幽靈水晶｜現在宅知道 VOD｜20260902｜P2",
+          "url": "https://www.youtube.com/watch?v=wzgDA4dU0Pg",
+          "thumb": "https://i.ytimg.com/vi/wzgDA4dU0Pg/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "KMvt0YMUYVQ",
+          "title": "加班的動腦時間，雙北行政區跟捷運你知道多少？｜6tan、鳥屎｜現在宅知道 VOD｜20260902｜P3",
+          "url": "https://www.youtube.com/watch?v=KMvt0YMUYVQ",
+          "thumb": "https://i.ytimg.com/vi/KMvt0YMUYVQ/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260826",
       "dateText": "2026/08/26",
