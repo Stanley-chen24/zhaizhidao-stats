@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-09-03 11:47(台灣時間)",
+  "updated": "2026-09-10 11:57(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,35 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 5
   },
   "episodes": [
+    {
+      "date": "20260909",
+      "dateText": "2026/09/09",
+      "title": "傻眼貓咪，這樣的死語測驗沒問題嗎？實況祖師爺們太IMBA了吧｜6tan、鳥屎 Feat. 阿謙｜現在宅知道 VOD｜20260909",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "--KHsND6a4c",
+          "title": "傻眼貓咪，這樣的死語測驗沒問題嗎？實況祖師爺們太IMBA了吧｜6tan、鳥屎 Feat. 阿謙｜現在宅知道 VOD｜20260909｜P1",
+          "url": "https://www.youtube.com/watch?v=--KHsND6a4c",
+          "thumb": "https://i.ytimg.com/vi/--KHsND6a4c/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "YT8PV2eDMOU",
+          "title": "新的好，舊的美，全部一次滿足！三位長者的《幻世錄 重製版》的戰棋策略時間｜6tan、鳥屎 Feat. 阿謙｜現在宅知道 VOD｜20260909｜P2",
+          "url": "https://www.youtube.com/watch?v=YT8PV2eDMOU",
+          "thumb": "https://i.ytimg.com/vi/YT8PV2eDMOU/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "432zTimn22M",
+          "title": "太空雙人合作解謎，可愛到爆炸的超絕讚賽璐璐動畫風｜6tan、鳥屎 Feat. 阿謙｜現在宅知道 VOD｜20260909｜P3",
+          "url": "https://www.youtube.com/watch?v=432zTimn22M",
+          "thumb": "https://i.ytimg.com/vi/432zTimn22M/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260902",
       "dateText": "2026/09/02",
