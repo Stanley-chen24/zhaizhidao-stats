@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-09-10 11:57(台灣時間)",
+  "updated": "2026-09-17 12:16(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,35 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 5
   },
   "episodes": [
+    {
+      "date": "20260916",
+      "dateText": "2026/09/16",
+      "title": "時隔九年再次上直播，撞球桌上的黑白幽默創作宇宙｜6tan、鳥屎 Feat. Duncan｜現在宅知道 VOD｜20260916",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "Tu93viG6gtw",
+          "title": "時隔九年再次上直播，撞球桌上的黑白幽默創作宇宙｜6tan、鳥屎 Feat. Duncan｜現在宅知道 VOD｜20260916｜P1",
+          "url": "https://www.youtube.com/watch?v=Tu93viG6gtw",
+          "thumb": "https://i.ytimg.com/vi/Tu93viG6gtw/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "fBBfTn2cV18",
+          "title": "這就是黃金的三角神力嗎？！亞洲小孩的夢想遊戲世家是這樣子的｜6tan、鳥屎 Feat. Duncan｜現在宅知道 VOD｜20260916｜P2",
+          "url": "https://www.youtube.com/watch?v=fBBfTn2cV18",
+          "thumb": "https://i.ytimg.com/vi/fBBfTn2cV18/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "2ZEIUG8Gre4",
+          "title": "放送事故！全員退避，各自逃命！慘絕人寰臭屁攝影棚｜6tan、鳥屎｜現在宅知道 VOD｜20260916｜P3",
+          "url": "https://www.youtube.com/watch?v=2ZEIUG8Gre4",
+          "thumb": "https://i.ytimg.com/vi/2ZEIUG8Gre4/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260909",
       "dateText": "2026/09/09",
