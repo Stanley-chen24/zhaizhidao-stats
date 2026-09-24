@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-09-17 12:16(台灣時間)",
+  "updated": "2026-09-24 12:01(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,35 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 5
   },
   "episodes": [
+    {
+      "date": "20260923",
+      "dateText": "2026/09/23",
+      "title": "如果是吃的，那我就很能理解了；母胎單身是還沒被愛情摧殘過嗎？｜6tan、鳥屎 Feat. 顏顏、瑟七、塞門｜現在宅知道 VOD｜20260923",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "WZRxiFNHapo",
+          "title": "如果是吃的，那我就很能理解了；母胎單身是還沒被愛情摧殘過嗎？｜6tan、鳥屎 Feat. 顏顏、瑟七、塞門｜現在宅知道 VOD｜20260923｜P1",
+          "url": "https://www.youtube.com/watch?v=WZRxiFNHapo",
+          "thumb": "https://i.ytimg.com/vi/WZRxiFNHapo/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "Wq6cPMduZ1I",
+          "title": "愛情終究會走向你情我願，白紙黑字的最終型態嗎？｜6tan、鳥屎 Feat. 顏顏、瑟七、塞門｜現在宅知道 VOD｜20260923｜P2",
+          "url": "https://www.youtube.com/watch?v=Wq6cPMduZ1I",
+          "thumb": "https://i.ytimg.com/vi/Wq6cPMduZ1I/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "vvIHGLsc1mg",
+          "title": "超高速戰地毒屁新聞播報｜6tan、鳥屎｜現在宅知道 VOD｜20260923｜P3",
+          "url": "https://www.youtube.com/watch?v=vvIHGLsc1mg",
+          "thumb": "https://i.ytimg.com/vi/vvIHGLsc1mg/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260916",
       "dateText": "2026/09/16",
