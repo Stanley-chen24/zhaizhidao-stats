@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-09-24 12:01(台灣時間)",
+  "updated": "2026-10-01 13:06(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -9,9 +9,40 @@ window.SHOW_DATA = {
   "counts": {
     "鐵牛": 5,
     "偷米": 5,
-    "赤鬼伯伯": 5
+    "赤鬼伯伯": 6
   },
   "episodes": [
+    {
+      "date": "20260930",
+      "dateText": "2026/09/30",
+      "title": "達成無法超越的約會後回娘家，下次只能是結婚了吧？！｜6tan、鳥屎 Feat. 赤鬼伯伯、阿憲｜現在宅知道 VOD｜20260930",
+      "guests": [
+        "赤鬼伯伯"
+      ],
+      "parts": [
+        {
+          "part": 1,
+          "id": "1HLPZVyul2o",
+          "title": "達成無法超越的約會後回娘家，下次只能是結婚了吧？！｜6tan、鳥屎 Feat. 赤鬼伯伯、阿憲｜現在宅知道 VOD｜20260930｜P1",
+          "url": "https://www.youtube.com/watch?v=1HLPZVyul2o",
+          "thumb": "https://i.ytimg.com/vi/1HLPZVyul2o/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "YnNBeF8E-Ys",
+          "title": "感動到我跟我弟弟都哭了，晚點再讓我弟弟好好地哭｜6tan、鳥屎 Feat. 赤鬼伯伯、阿憲｜現在宅知道 VOD｜20260930｜P2",
+          "url": "https://www.youtube.com/watch?v=YnNBeF8E-Ys",
+          "thumb": "https://i.ytimg.com/vi/YnNBeF8E-Ys/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "zEqguqiz5vU",
+          "title": "默契四皇的XP大考驗，不想平凡的生活只想非凡的流量｜6tan、鳥屎 Feat. 赤鬼伯伯、阿憲｜現在宅知道 VOD｜20260930｜P3",
+          "url": "https://www.youtube.com/watch?v=zEqguqiz5vU",
+          "thumb": "https://i.ytimg.com/vi/zEqguqiz5vU/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20260923",
       "dateText": "2026/09/23",
