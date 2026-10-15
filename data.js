@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-10-08 13:23(台灣時間)",
+  "updated": "2026-10-15 11:58(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -13,29 +13,51 @@ window.SHOW_DATA = {
   },
   "episodes": [
     {
+      "date": "20261014",
+      "dateText": "2026/10/14",
+      "title": "今日不只演算法大混亂，而且也很玄幻，順應天命與劍骨｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "8FgL4iaYDL0",
+          "title": "今日不只演算法大混亂，而且也很玄幻，順應天命與劍骨｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014｜P1",
+          "url": "https://www.youtube.com/watch?v=8FgL4iaYDL0",
+          "thumb": "https://i.ytimg.com/vi/8FgL4iaYDL0/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "M_a0wlHvS18",
+          "title": "直男博士來幫各位看看還有什麼疑點！人際關係中最重要的三件事，溝通、溝通，還是溝通｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014｜P2",
+          "url": "https://www.youtube.com/watch?v=M_a0wlHvS18",
+          "thumb": "https://i.ytimg.com/vi/M_a0wlHvS18/hqdefault.jpg"
+        }
+      ]
+    },
+    {
       "date": "20261007",
       "dateText": "2026/10/07",
-      "title": "行動代號：營火，歡迎收看台通戰情室，請隨時注意保密防諜｜6tan、鳥屎 Feat.台灣通勤第一品牌｜現在宅知道 VOD｜20261007",
+      "title": "行動代號：營火，歡迎收看台通戰情室，請隨時注意保密防諜｜6tan、鳥屎 Feat. 台灣通勤第一品牌｜現在宅知道 VOD｜20261007",
       "guests": [],
       "parts": [
         {
           "part": 1,
           "id": "rmSu399HJsc",
-          "title": "行動代號：營火，歡迎收看台通戰情室，請隨時注意保密防諜｜6tan、鳥屎 Feat.台灣通勤第一品牌｜現在宅知道 VOD｜20261007｜P1",
+          "title": "行動代號：營火，歡迎收看台通戰情室，請隨時注意保密防諜｜6tan、鳥屎 Feat. 台灣通勤第一品牌｜現在宅知道 VOD｜20261007｜P1",
           "url": "https://www.youtube.com/watch?v=rmSu399HJsc",
           "thumb": "https://i.ytimg.com/vi/rmSu399HJsc/hqdefault.jpg"
         },
         {
           "part": 2,
           "id": "nn1BSsHWk04",
-          "title": "我就是那個孩子，我要玩遙控賽車！！！｜6tan、鳥屎 Feat.台灣通勤第一品牌｜現在宅知道 VOD｜20261007｜P2",
+          "title": "我就是那個孩子，我要玩遙控賽車！！！｜6tan、鳥屎 Feat. 台灣通勤第一品牌｜現在宅知道 VOD｜20261007｜P2",
           "url": "https://www.youtube.com/watch?v=nn1BSsHWk04",
           "thumb": "https://i.ytimg.com/vi/nn1BSsHWk04/hqdefault.jpg"
         },
         {
           "part": 3,
           "id": "ao9R-bzL7d8",
-          "title": "不停下來的話，就全速前進吧！教國外回來的妹妹開車｜6tan、鳥屎｜現在宅知道 VOD｜20261007｜P3",
+          "title": "停不下來的話，就全速前進吧！教國外回來的妹妹開車｜6tan、鳥屎｜現在宅知道 VOD｜20261007｜P3",
           "url": "https://www.youtube.com/watch?v=ao9R-bzL7d8",
           "thumb": "https://i.ytimg.com/vi/ao9R-bzL7d8/hqdefault.jpg"
         }
