@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-10-15 11:58(台灣時間)",
+  "updated": "2026-10-19 03:12(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -15,13 +15,13 @@ window.SHOW_DATA = {
     {
       "date": "20261014",
       "dateText": "2026/10/14",
-      "title": "今日不只演算法大混亂，而且也很玄幻，順應天命與劍骨｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014",
+      "title": "今日不只演算法大混亂，而且也很玄幻，順應天命與薦骨｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014",
       "guests": [],
       "parts": [
         {
           "part": 1,
           "id": "8FgL4iaYDL0",
-          "title": "今日不只演算法大混亂，而且也很玄幻，順應天命與劍骨｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014｜P1",
+          "title": "今日不只演算法大混亂，而且也很玄幻，順應天命與薦骨｜6tan、鳥屎 Feat. 瘋女人聊天室｜現在宅知道 VOD｜20261014｜P1",
           "url": "https://www.youtube.com/watch?v=8FgL4iaYDL0",
           "thumb": "https://i.ytimg.com/vi/8FgL4iaYDL0/hqdefault.jpg"
         },
