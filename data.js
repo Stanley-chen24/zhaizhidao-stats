@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-10-19 03:12(台灣時間)",
+  "updated": "2026-10-22 12:02(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,28 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 6
   },
   "episodes": [
+    {
+      "date": "20261021",
+      "dateText": "2026/10/21",
+      "title": "就算歲數差了兩輪，年輕人也還是玩這些看這些的！｜6tan、鳥屎 Feat. F.F.O｜現在宅知道 VOD｜20261021",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "qZuVaKiaE_U",
+          "title": "就算歲數差了兩輪，年輕人也還是玩這些看這些的！｜6tan、鳥屎 Feat. F.F.O｜現在宅知道 VOD｜20261021｜P1",
+          "url": "https://www.youtube.com/watch?v=qZuVaKiaE_U",
+          "thumb": "https://i.ytimg.com/vi/qZuVaKiaE_U/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "9vmPHGWYl24",
+          "title": "最具挑戰的猜角色日文宅藝班，但日本人怎麼話最少啦｜6tan、鳥屎 Feat. F.F.O｜現在宅知道 VOD｜20261021｜P2",
+          "url": "https://www.youtube.com/watch?v=9vmPHGWYl24",
+          "thumb": "https://i.ytimg.com/vi/9vmPHGWYl24/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20261014",
       "dateText": "2026/10/14",
