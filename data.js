@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-10-22 12:02(台灣時間)",
+  "updated": "2026-10-29 13:05(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,35 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 6
   },
   "episodes": [
+    {
+      "date": "20261028",
+      "dateText": "2026/10/28",
+      "title": "無法有還原性，那就要有話題性！我們只能COS 登勢跟伊莉莎白了｜6tan、鳥屎 Feat. 諾亞亞｜現在宅知道 VOD｜20261028",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "WnRI57-U9Ps",
+          "title": "無法有還原性，那就要有話題性！我們只能COS 登勢跟伊莉莎白了｜6tan、鳥屎 Feat. 諾亞亞｜現在宅知道 VOD｜20261028｜P1",
+          "url": "https://www.youtube.com/watch?v=WnRI57-U9Ps",
+          "thumb": "https://i.ytimg.com/vi/WnRI57-U9Ps/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "dlMCb0WMyMg",
+          "title": "顏藝乃天命，為志業！最強示範場，為天下第一顏藝大會作準備｜6tan、鳥屎 Feat. 諾亞亞｜現在宅知道 VOD｜20261028｜P2",
+          "url": "https://www.youtube.com/watch?v=dlMCb0WMyMg",
+          "thumb": "https://i.ytimg.com/vi/dlMCb0WMyMg/hqdefault.jpg"
+        },
+        {
+          "part": 3,
+          "id": "-1Zh0GJ11Mw",
+          "title": "渡假勝地享受運動請記得注意安全，小心耳膜！｜6tan、鳥屎 Feat. 諾亞亞｜現在宅知道 VOD｜20261028｜P3",
+          "url": "https://www.youtube.com/watch?v=-1Zh0GJ11Mw",
+          "thumb": "https://i.ytimg.com/vi/-1Zh0GJ11Mw/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20261021",
       "dateText": "2026/10/21",
