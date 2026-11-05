@@ -1,17 +1,41 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-10-29 13:05(台灣時間)",
+  "updated": "2026-11-05 13:55(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
     "赤鬼伯伯"
   ],
   "counts": {
-    "鐵牛": 5,
+    "鐵牛": 6,
     "偷米": 5,
     "赤鬼伯伯": 6
   },
   "episodes": [
+    {
+      "date": "20261104",
+      "dateText": "2026/11/04",
+      "title": "大的東西買不起，小的東西買不停，一起現在來找茶！｜6tan Feat. 鐵牛、阿謙｜現在宅知道 VOD｜20261104",
+      "guests": [
+        "鐵牛"
+      ],
+      "parts": [
+        {
+          "part": 1,
+          "id": "hU8llkQ_W5Q",
+          "title": "大的東西買不起，小的東西買不停，一起現在來找茶！｜6tan Feat. 鐵牛、阿謙｜現在宅知道 VOD｜20261104｜P1",
+          "url": "https://www.youtube.com/watch?v=hU8llkQ_W5Q",
+          "thumb": "https://i.ytimg.com/vi/hU8llkQ_W5Q/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "QQdn4KuoAzs",
+          "title": "AAAAA好像會打到自己人欸，角鬥士打完一定要記得喝水｜6tan Feat. 鐵牛、阿謙｜現在宅知道 VOD｜20261104｜P2",
+          "url": "https://www.youtube.com/watch?v=QQdn4KuoAzs",
+          "thumb": "https://i.ytimg.com/vi/QQdn4KuoAzs/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20261028",
       "dateText": "2026/10/28",
