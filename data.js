@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-11-08 00:40(台灣時間)",
+  "updated": "2026-11-12 14:35(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -12,6 +12,28 @@ window.SHOW_DATA = {
     "赤鬼伯伯": 6
   },
   "episodes": [
+    {
+      "date": "20261111",
+      "dateText": "2026/11/11",
+      "title": "全能型軍武宅的預設動作是勁歌熱舞｜6tan、鳥屎 Feat. 叉燒、中指通｜現在宅知道 VOD｜20261111",
+      "guests": [],
+      "parts": [
+        {
+          "part": 1,
+          "id": "uO7e2xtgDyo",
+          "title": "全能型軍武宅的預設動作是勁歌熱舞｜6tan、鳥屎 Feat. 叉燒、中指通｜現在宅知道 VOD｜20261111｜P1",
+          "url": "https://www.youtube.com/watch?v=uO7e2xtgDyo",
+          "thumb": "https://i.ytimg.com/vi/uO7e2xtgDyo/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "tle94Y11wQ4",
+          "title": "管你想要什麼元素，這裡通通滿足你，各種 Guessr 猜到爽！｜6tan、鳥屎 Feat. 中指通｜現在宅知道 VOD｜20261111｜P2",
+          "url": "https://www.youtube.com/watch?v=tle94Y11wQ4",
+          "thumb": "https://i.ytimg.com/vi/tle94Y11wQ4/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20261104",
       "dateText": "2026/11/04",
