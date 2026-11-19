@@ -1,6 +1,6 @@
 window.SHOW_DATA = {
   "year": "2026",
-  "updated": "2026-11-12 14:35(台灣時間)",
+  "updated": "2026-11-19 14:45(台灣時間)",
   "guests": [
     "鐵牛",
     "偷米",
@@ -8,10 +8,35 @@ window.SHOW_DATA = {
   ],
   "counts": {
     "鐵牛": 6,
-    "偷米": 5,
-    "赤鬼伯伯": 6
+    "偷米": 6,
+    "赤鬼伯伯": 7
   },
   "episodes": [
+    {
+      "date": "20261118",
+      "dateText": "2026/11/18",
+      "title": "名嘴主持人不在，節目會比較短嗎？PR 99.85 衰的偷老哥會與大家同在｜鳥屎 Feat. 偷米、赤鬼伯伯｜現在宅知道 VOD｜20261118",
+      "guests": [
+        "偷米",
+        "赤鬼伯伯"
+      ],
+      "parts": [
+        {
+          "part": 1,
+          "id": "cgmerS6x5eY",
+          "title": "名嘴主持人不在，節目會比較短嗎？PR 99.85 衰的偷老哥會與大家同在｜鳥屎 Feat. 偷米、赤鬼伯伯｜現在宅知道 VOD｜20261118｜P1",
+          "url": "https://www.youtube.com/watch?v=cgmerS6x5eY",
+          "thumb": "https://i.ytimg.com/vi/cgmerS6x5eY/hqdefault.jpg"
+        },
+        {
+          "part": 2,
+          "id": "6k8bE-IO7d0",
+          "title": "在畫面的正中間先畫一個芭樂醬；這個倒過的M是W嗎？｜鳥屎 Feat. 偷米、赤鬼伯伯｜現在宅知道 VOD｜20261118｜P2",
+          "url": "https://www.youtube.com/watch?v=6k8bE-IO7d0",
+          "thumb": "https://i.ytimg.com/vi/6k8bE-IO7d0/hqdefault.jpg"
+        }
+      ]
+    },
     {
       "date": "20261111",
       "dateText": "2026/11/11",
